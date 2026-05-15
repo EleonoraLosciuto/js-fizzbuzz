@@ -12,3 +12,23 @@
     };
 
 
+    // Altra possibilità - questa possibilitá ha il vantaggio di essere piú flessibile se per esempio aggiungessi un altro multiplo e devo concatenare anche quello (es. multiplo di 7 "Riss")
+    
+    for(i = 0; i < 100; i++) { //loop da 0 a 99
+        const val = i + 1; // variabile per i+1 --> console.log(val) --> loop da 1 a 100
+        const multipleOf3 = val % 3 === 0;
+        const multipleOf5 = val % 5 === 0;
+        const multipleOf7 = val % 7 === 0;
+
+        let result = ""; // utilizzo una variabile stringa di accumulo
+
+        if (multipleOf3) result += "Fizz"; // concateno "Fizz"
+        if (multipleOf5) result += "Buzz"; // concateno "Buzz"
+        if (multipleOf7) result += "Riss"; // concateno "Riss"
+        if (!multipleOf3 && !multipleOf5 && !multipleOf7) result = val;
+
+        console.log(result);
+
+        }
+
+
